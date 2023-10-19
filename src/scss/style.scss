@@ -1,0 +1,137 @@
+// first variable
+
+$font-stack: Quando;
+$primary-color: #787878;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+// second variable
+
+$primary-color: #111111;
+$transition: .20s;
+$decoration: none;
+
+a {
+  color: $primary-color;
+  text-decoration: $decoration;
+    transition: $transition;
+}
+
+// third variable
+
+$primary-color: #989898;
+$padding: 30px 0;
+$textall: center;
+
+
+footer{
+    color: $primary-color;
+    padding: $padding;
+    text-align: $textall;
+}
+
+// fourth variable
+
+$top: 25px;
+$bottm: 20px;
+
+h6 {
+    margin-top: $top;
+    margin-bottom: $bottm;
+}
+
+// fifth varaible
+
+$wid: 100%;
+$height: auto;
+
+img {
+    max-width: $wid;
+    height: $height;
+}
+
+// first nesting
+
+header{
+    font-family: 'Josefin Sans', sans-serif;
+    nav ul{display: none;}
+}
+
+
+//second nesting
+
+.image-part {
+    flex: 1;
+    overflow: hidden;
+    margin-bottom: 0;
+    img {transition: transform 3.5s ease-in-out;}
+    img:hover {transform: scale(1.5,1.5);}
+}
+
+// third nesting
+
+.post-title{
+    margin-top: 0;
+    a{
+        color: #324360;
+        text-transform: uppercase;
+        font-size: 26px;
+        font-weight: 900;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        line-height: 1.3em;
+        transition: all .3s ease;
+    }
+}
+
+// fourth nesting
+
+.footer-social-links {
+    padding: 20px 0;
+    line-height: 2em;
+a{
+    margin: 0 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    }
+}
+
+//fifth nesting
+
+footer {
+    padding: 30px 0;
+    text-align: center;
+    background: #eaf2ff;
+    color: #989898;
+
+a {
+    color: #989898;
+}
+}
+
+
+
+// mixin 1
+
+
+@mixin margin-top($margin-top:0){
+    margin-top: 0;
+}
+
+.post-title {
+    @include margin-top;
+}
+
+//second mixin
+
+@mixin font-color($font-color: #35c4ce){
+    color: $font-color;
+}
+
+.post-title a:hover {
+    @include font-color
+}
